@@ -1,0 +1,21 @@
+html {
+  color:$body-text;  
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  font: {
+    font-size:14px;
+    size: 1.4rem;
+	  family: $font-family-base;
+  }
+  color:$body-text;  
+  line-height:$line-height;
+  background:$beige;    
+  @media all and (min-width: 50em) {
+    font-size:16px;
+    font-size: 1.6rem;
+    line-height: $line-height-large;
+  }
+}
