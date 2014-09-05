@@ -1,0 +1,48 @@
+// Body font size
+body {
+
+	font-size:em(16);
+	line-height:em(21);
+  
+	@include respond-to(small) {  
+		// Use default
+	}
+	@include respond-to(med) {
+		font-size:em(18);
+		line-height:em(24);
+	}
+	@include respond-to(large) {
+		font-size:em(20);
+		line-height:em(26);
+	}
+	@include respond-to(xl) {
+		// No need to make any bigger
+	}
+  
+}
+
+// Header sizes
+
+
+
+
+h1 {
+	font-size:em(24);
+	line-height:em(28);
+	margin:0;
+}
+h2 {
+	font-size:em(22);
+	line-height:em(26);
+	margin:0;
+}
+h3 {
+	font-size:em(20);
+	line-height:em(24);
+	margin:0;
+}
+h4, h5, h6 {
+	font-size:em(18);
+	line-height:em(22);
+	margin:0;
+}

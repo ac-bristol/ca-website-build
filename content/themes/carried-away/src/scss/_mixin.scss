@@ -1,0 +1,29 @@
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (min-width: $small) {
+      @content;
+    }
+  }
+ 
+  @else if $breakpoint == "med" {
+    @media (min-width: $med) {
+      @content;
+    }
+  }
+ 
+  @else if $breakpoint == "large" {
+    @media (min-width: $large) {
+      @content;
+    }
+  }
+  
+  @else if $breakpoint == "xl" {
+    @media (min-width: $xl) {
+      @content;
+    }
+  }
+}
+
+@function em($pixels, $context: $base-font-size) {
+  @return #{$pixels/$context}em
+}
