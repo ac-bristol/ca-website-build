@@ -36,6 +36,14 @@ module.exports = function(grunt) {
         dest: '<%= meta.buildPath %>javascript/main.min.js'
       }
     },
+    sprite:{
+      all: {
+        src: 'src/images/sprites/*.png',
+        destImg: 'assets/images/sprite.png',
+        destCSS: 'src/scss/_sprites.scss',
+        'cssFormat': 'sass',
+      }
+    },
     compass: {
       dev: {
           options: {              
@@ -69,6 +77,10 @@ module.exports = function(grunt) {
       // We watch and compile sass files as normal but don't live reload here
         files: ['<%= meta.srcPath %>scss/*.scss'],
         tasks: ['compass:dev'],
+      },
+      sprite: {
+      	files: ['<%= meta.srcPath %>images/sprites/*.png'],
+      	tasks: ['sprite']
       }
     }
   });
@@ -77,15 +89,15 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  //grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-spritesmith');
   //grunt.loadNpmTasks('grunt-casperjs');
 
   // Default task.
-  grunt.registerTask('default', ['compass:dev','concat']);
+  grunt.registerTask('default', ['compass:dev','concat', 'sprite']);
 
   // Build Task
-  grunt.registerTask('build', ['compass:build','uglify', 'concat']);
+  grunt.registerTask('build', ['compass:build','uglify', 'concat', 'sprite']);
 
 };
