@@ -768,14 +768,14 @@ ul {
   padding-left: 1.4em;
 }
 
-/* CORE SASS
+/* GRID
 
 Contents
 ==================================================
-    #Set up grid
+    #Define grid
 */
-/* #Set up grid */
-/* line 12, ../../src/scss/_core.scss */
+/* #Define grid */
+/* line 12, ../../src/scss/_grid.scss */
 .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -784,77 +784,78 @@ Contents
   width: 100%;
 }
 
-/* line 18, ../../src/scss/_core.scss */
+/* line 18, ../../src/scss/_grid.scss */
 .col:first-child {
   margin-left: 0;
 }
 
 @media (min-width: 50em) {
-  /* line 24, ../../src/scss/_core.scss */
+  /* line 24, ../../src/scss/_grid.scss */
   .col {
     margin-left: 1%;
   }
 
-  /* line 27, ../../src/scss/_core.scss */
+  /* line 27, ../../src/scss/_grid.scss */
   .span1 {
     width: 7.41667%;
   }
 
-  /* line 30, ../../src/scss/_core.scss */
+  /* line 30, ../../src/scss/_grid.scss */
   .span2 {
     width: 15.83333%;
   }
 
-  /* line 33, ../../src/scss/_core.scss */
+  /* line 33, ../../src/scss/_grid.scss */
   .span3 {
     width: 24.25%;
   }
 
-  /* line 36, ../../src/scss/_core.scss */
+  /* line 36, ../../src/scss/_grid.scss */
   .span4 {
     width: 32.66667%;
   }
 
-  /* line 39, ../../src/scss/_core.scss */
+  /* line 39, ../../src/scss/_grid.scss */
   .span5 {
     width: 41.08333%;
   }
 
-  /* line 42, ../../src/scss/_core.scss */
+  /* line 42, ../../src/scss/_grid.scss */
   .span6 {
     width: 49.5%;
   }
 
-  /* line 45, ../../src/scss/_core.scss */
+  /* line 45, ../../src/scss/_grid.scss */
   .span7 {
     width: 57.91667%;
   }
 
-  /* line 48, ../../src/scss/_core.scss */
+  /* line 48, ../../src/scss/_grid.scss */
   .span8 {
     width: 66.33333%;
   }
 
-  /* line 51, ../../src/scss/_core.scss */
+  /* line 51, ../../src/scss/_grid.scss */
   .span9 {
     width: 74.75%;
   }
 
-  /* line 54, ../../src/scss/_core.scss */
+  /* line 54, ../../src/scss/_grid.scss */
   .span10 {
     width: 83.16667%;
   }
 
-  /* line 57, ../../src/scss/_core.scss */
+  /* line 57, ../../src/scss/_grid.scss */
   .span11 {
     width: 91.58333%;
   }
 
-  /* line 60, ../../src/scss/_core.scss */
+  /* line 60, ../../src/scss/_grid.scss */
   .span12 {
     width: 100%;
     margin-left: 0;
   }
 }
+/* CUSTOM STYLES */
 
 /*# sourceMappingURL=main.css.map */
