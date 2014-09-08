@@ -1,4 +1,16 @@
-// Set up body fonts
+/* TYPE
+
+Contents
+==================================================
+    #Body
+    #Headers
+    #Misc
+    #Grid
+*/
+
+
+
+/* #Body */
 body {
 
 	font: 80%/1.4 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
@@ -18,7 +30,7 @@ body {
   
 }
 
-// Header sizes
+/* #Headers */
 h1 {
 	font-size: 2em;
 	line-height:1em;
@@ -38,7 +50,7 @@ h4, h5, h6 {
 	margin:0 0 0.2em 0;
 }
 
-// Anchors, paragraphs, lists, etc
+/* #Misc */
 a {
 	text-decoration:underline;
 	&:hover {

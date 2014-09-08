@@ -1,3 +1,16 @@
+/* VARIABLES
+
+Contents
+==================================================
+    #Colors
+    #Sizes
+    #Breakpoints
+    #Grid
+*/
+/* #Colors */
+/* #Sizes*/
+/* #Breakpoints */
+/* #Grid */
 /* line 10, ../../src/scss/_htmlbp.scss */
 html {
   background: white;
@@ -650,67 +663,198 @@ table {
   box-sizing: border-box;
 }
 
-/* line 2, ../../src/scss/_type.scss */
+/* MIXINS
+
+Contents
+==================================================
+    #Breakpoints
+    #Grid
+*/
+/* #Breakpoints */
+/* #Grid */
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/* TYPE
+
+Contents
+==================================================
+    #Body
+    #Headers
+    #Misc
+    #Grid
+*/
+/* #Body */
+/* line 14, ../../src/scss/_type.scss */
 body {
   font: 80%/1.4 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 }
 @media (min-width: 46.8em) {
-  /* line 2, ../../src/scss/_type.scss */
+  /* line 14, ../../src/scss/_type.scss */
   body {
     font-size: 100%;
   }
 }
 @media (min-width: 73em) {
-  /* line 2, ../../src/scss/_type.scss */
+  /* line 14, ../../src/scss/_type.scss */
   body {
     font-size: 110%;
   }
 }
 
-/* line 22, ../../src/scss/_type.scss */
+/* #Headers */
+/* line 34, ../../src/scss/_type.scss */
 h1 {
   font-size: 2em;
   line-height: 1em;
   margin: 0 0 0.6em 0;
 }
 
-/* line 27, ../../src/scss/_type.scss */
+/* line 39, ../../src/scss/_type.scss */
 h2 {
   font-size: 1.4em;
   line-height: 1em;
   margin: 0 0 0.5em 0;
 }
 
-/* line 32, ../../src/scss/_type.scss */
+/* line 44, ../../src/scss/_type.scss */
 h3 {
   line-height: 1em;
   margin: 0 0 0.4em 0;
 }
 
-/* line 36, ../../src/scss/_type.scss */
+/* line 48, ../../src/scss/_type.scss */
 h4, h5, h6 {
   line-height: 1em;
   margin: 0 0 0.2em 0;
 }
 
-/* line 42, ../../src/scss/_type.scss */
+/* #Misc */
+/* line 54, ../../src/scss/_type.scss */
 a {
   text-decoration: underline;
 }
-/* line 44, ../../src/scss/_type.scss */
+/* line 56, ../../src/scss/_type.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 48, ../../src/scss/_type.scss */
+/* line 60, ../../src/scss/_type.scss */
 p {
   margin: 0 0 0.8em;
 }
 
-/* line 51, ../../src/scss/_type.scss */
+/* line 63, ../../src/scss/_type.scss */
 ul {
   margin: 0.8em 0;
   padding-left: 1.4em;
+}
+
+/* CORE SASS
+
+Contents
+==================================================
+    #Set up grid
+*/
+/* #Set up grid */
+/* line 12, ../../src/scss/_core.scss */
+.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+}
+
+/* line 18, ../../src/scss/_core.scss */
+.col:first-child {
+  margin-left: 0;
+}
+
+@media (min-width: 50em) {
+  /* line 24, ../../src/scss/_core.scss */
+  .col {
+    margin-left: 1%;
+  }
+
+  /* line 27, ../../src/scss/_core.scss */
+  .span1 {
+    width: 7.41667%;
+  }
+
+  /* line 30, ../../src/scss/_core.scss */
+  .span2 {
+    width: 15.83333%;
+  }
+
+  /* line 33, ../../src/scss/_core.scss */
+  .span3 {
+    width: 24.25%;
+  }
+
+  /* line 36, ../../src/scss/_core.scss */
+  .span4 {
+    width: 32.66667%;
+  }
+
+  /* line 39, ../../src/scss/_core.scss */
+  .span5 {
+    width: 41.08333%;
+  }
+
+  /* line 42, ../../src/scss/_core.scss */
+  .span6 {
+    width: 49.5%;
+  }
+
+  /* line 45, ../../src/scss/_core.scss */
+  .span7 {
+    width: 57.91667%;
+  }
+
+  /* line 48, ../../src/scss/_core.scss */
+  .span8 {
+    width: 66.33333%;
+  }
+
+  /* line 51, ../../src/scss/_core.scss */
+  .span9 {
+    width: 74.75%;
+  }
+
+  /* line 54, ../../src/scss/_core.scss */
+  .span10 {
+    width: 83.16667%;
+  }
+
+  /* line 57, ../../src/scss/_core.scss */
+  .span11 {
+    width: 91.58333%;
+  }
+
+  /* line 60, ../../src/scss/_core.scss */
+  .span12 {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

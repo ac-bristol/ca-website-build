@@ -41,7 +41,7 @@ module.exports = function(grunt) {
         src: 'src/images/sprites/*.png',
         destImg: 'assets/images/sprite.png',
         destCSS: 'src/scss/_sprites.scss',
-        'cssFormat': 'sass',
+        'cssFormat': 'scss',
       }
     },
     compass: {
