@@ -74,7 +74,6 @@ module.exports = function(grunt) {
         tasks: ['uglify'],
       },
       sass: {
-      // We watch and compile sass files as normal but don't live reload here
         files: ['<%= meta.srcPath %>scss/*.scss'],
         tasks: ['compass:dev'],
       },
