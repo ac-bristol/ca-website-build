@@ -87,3 +87,43 @@ function carried_away_setup_author() {
 	}
 }
 add_action( 'wp', 'carried_away_setup_author' );
+
+add_theme_support( 'post-thumbnails' );
+
+function codex_product_init() {
+	$labels = array(
+		'name'               => _x( 'Products', 'post type general name', 'carried-away' ),
+		'singular_name'      => _x( 'Product', 'post type singular name', 'carried-away' ),
+		'menu_name'          => _x( 'Products', 'admin menu', 'carried-away' ),
+		'name_admin_bar'     => _x( 'Product', 'add new on admin bar', 'carried-away' ),
+		'add_new'            => _x( 'Add New', 'product', 'carried-away' ),
+		'add_new_item'       => __( 'Add New Product', 'carried-away' ),
+		'new_item'           => __( 'New Product', 'carried-away' ),
+		'edit_item'          => __( 'Edit Product', 'carried-away' ),
+		'view_item'          => __( 'View Product', 'carried-away' ),
+		'all_items'          => __( 'All Products', 'carried-away' ),
+		'search_items'       => __( 'Search Products', 'carried-away' ),
+		'parent_item_colon'  => __( 'Parent Products:', 'carried-away' ),
+		'not_found'          => __( 'No books found.', 'carried-away' ),
+		'not_found_in_trash' => __( 'No books found in Trash.', 'carried-away' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'product' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'post-thumbnails' )
+	);
+
+	register_post_type( 'product', $args );
+}
+
+add_action( 'init', 'codex_product_init' );

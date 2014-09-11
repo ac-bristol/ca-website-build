@@ -9,9 +9,14 @@ Contents
 */
 
 /* #Colors */
-$color-bg:white;
-$color-primary:grey;
-$color-copy:black;
+$black:#000000;
+$white:#ffffff;
+$grey:#222222;
+
+$color-bg:$white;
+$color-primary:$grey;
+$color-copy:$black;
+
 
 /* #Sizes*/
 $base-font-size: 16;
