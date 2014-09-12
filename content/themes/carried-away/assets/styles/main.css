@@ -13,25 +13,25 @@ Contents
 /* #Grid */
 /* line 10, ../../src/scss/_htmlbp.scss */
 html {
-  background: white;
+  background: #ffffff;
 }
 
 /* line 14, ../../src/scss/_htmlbp.scss */
 body {
   background: transparent;
-  color: black;
+  color: #000000;
 }
 
 /* line 23, ../../src/scss/_htmlbp.scss */
 ::-moz-selection {
-  background: grey;
+  background: #222222;
   color: #fff;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
 /* line 29, ../../src/scss/_htmlbp.scss */
 ::selection {
-  background: grey;
+  background: #222222;
   color: #fff;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
@@ -41,7 +41,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid grey;
+  border-top: 1px solid #222222;
   margin: 1em 0;
   padding: 0;
 }
@@ -213,9 +213,9 @@ audio:not([controls]) {
  */
 /* line 72, ../../src/scss/_normalize.scss */
 html {
-  background: white;
+  background: #ffffff;
   /* 1 */
-  color: black;
+  color: #000000;
   /* 2 */
   font-size: 100%;
   /* 3 */
@@ -305,8 +305,8 @@ h1 {
  */
 /* line 158, ../../src/scss/_normalize.scss */
 mark {
-  background: grey;
-  color: black;
+  background: #222222;
+  color: #000000;
 }
 
 /**
@@ -699,8 +699,8 @@ Contents
 ==================================================
     #Body
     #Headers
+    	#Custom
     #Misc
-    #Grid
 */
 /* #Body */
 /* line 14, ../../src/scss/_type.scss */
@@ -747,24 +747,30 @@ h4, h5, h6 {
   margin: 0 0 0.2em 0;
 }
 
+/* #Custom */
+/* line 55, ../../src/scss/_type.scss */
+#masthead h1, h2 {
+  margin-bottom: 0;
+}
+
 /* #Misc */
-/* line 54, ../../src/scss/_type.scss */
+/* line 60, ../../src/scss/_type.scss */
 a {
   text-decoration: underline;
 }
-/* line 56, ../../src/scss/_type.scss */
+/* line 62, ../../src/scss/_type.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 60, ../../src/scss/_type.scss */
+/* line 66, ../../src/scss/_type.scss */
 p {
-  margin: 0 0 0.8em;
+  margin: 0;
 }
 
-/* line 63, ../../src/scss/_type.scss */
+/* line 69, ../../src/scss/_type.scss */
 ul {
-  margin: 0.8em 0;
+  margin: 0;
   padding-left: 1.4em;
 }
 
@@ -776,7 +782,7 @@ Contents
 */
 /* #Define grid */
 /* line 12, ../../src/scss/_grid.scss */
-.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+.span1, .span2, .span3, .span4, .span5, .span6, .half-width, .span7, .span8, .span9, .span10, .span11, .span12, .full-width {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -821,7 +827,7 @@ Contents
   }
 
   /* line 42, ../../src/scss/_grid.scss */
-  .span6 {
+  .span6, .half-width {
     width: 49.5%;
   }
 
@@ -851,11 +857,56 @@ Contents
   }
 
   /* line 60, ../../src/scss/_grid.scss */
-  .span12 {
+  .span12, .full-width {
     width: 100%;
     margin-left: 0;
   }
 }
 /* CUSTOM STYLES */
+/* line 5, ../../src/scss/_custom.scss */
+#page {
+  text-align: center;
+}
+/* line 7, ../../src/scss/_custom.scss */
+#page #masthead {
+  background: #ffffff;
+}
+/* line 10, ../../src/scss/_custom.scss */
+#page #content {
+  background: #222222;
+}
+/* line 13, ../../src/scss/_custom.scss */
+#page #colophon {
+  background: blue;
+}
+
+/* line 20, ../../src/scss/_custom.scss */
+.menu-toggle,
+.main-navigation.toggled .nav-menu {
+  display: block;
+}
+
+/* line 25, ../../src/scss/_custom.scss */
+.main-navigation ul {
+  display: none;
+}
+
+@media (min-width: 46.8em) {
+  /* line 30, ../../src/scss/_custom.scss */
+  .menu-toggle {
+    display: none;
+  }
+
+  /* line 33, ../../src/scss/_custom.scss */
+  .main-navigation ul {
+    display: block;
+  }
+}
+/* line 53, ../../src/scss/_custom.scss */
+.inner.image-only img {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
 
 /*# sourceMappingURL=main.css.map */

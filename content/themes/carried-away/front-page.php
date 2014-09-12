@@ -45,34 +45,11 @@ get_header(); ?>
 <div class="container clearfix">
 
 	<div class="full-width">
-		<div class="inner">
+		<div class="inner loop">
 		Products
-<?php
-
-$paged = (get_query_var('page')) ? get_query_var('page') : 1;
-
-$args = array(
-	'post_type' => 'product',
-	'order' => 'asc',
-	'posts_per_page' => 1,
-	'paged' => $paged
-);
-$query = new WP_Query( $args );
-
-while ( $query->have_posts() ) {
-	$query->next_post();
-	echo '<li>' . get_the_title( $query	->post->ID ) . '</li>';
-} ?>
-
-<div id="pagination">
-	<ul class="pagination">
-		<li id="next-stories" class="arrow">
-			<?php next_posts_link( 'Load more >>', $query->max_num_pages ); ?>
-		</li>
-	</ul>
-</div><!-- /#pagination -->
-
-<?php wp_reset_postdata(); ?>
+		<div id="data-container"></div>
+		<div id="next-post">
+			<a href="#">View more products</a>
 		</div>
 	</div>
 	
