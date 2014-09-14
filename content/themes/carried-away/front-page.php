@@ -22,15 +22,15 @@ get_header(); ?>
 	
 </div>
 
-<div class="container clearfix">
+<div class="container clearfix home-chessboard">
 
-	<div class="half-width">
+	<div class="home-tile">
 		<div class="inner image-only">
 			<img src="<?php echo get_bloginfo('template_directory');?>/assets/images/bags.jpg" alt="stack of bags" />
 		</div>
 	</div>
 	
-	<div class="half-width">
+	<div class="home-tile">
 		<div class="inner">
 			<?php while ( have_posts() ) : the_post(); ?>
 

@@ -61,9 +61,12 @@ get_header(); ?>
 
 						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
 							_e( 'Chats', 'carried-away' );
+							
+						elseif ( is_post_type_archive('product') ) :
+							_e( 'Products', 'carried-away' );
 
 						else :
-							_e( 'Archives', 'carried-away' );
+							_e( 'Blog', 'carried-away' );
 
 						endif;
 					?>

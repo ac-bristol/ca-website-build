@@ -8,7 +8,7 @@
 		background:$white;
 	}
 	#content {
-		background:$grey;
+		//background:$white;
 	}
 	#colophon {
 		background:blue;
@@ -48,6 +48,54 @@
 
 // Misc styles
 
+.home-chessboard {
+	display:inline-block;
+	height:100%;
+	float:left;
+	position:relative;
+	width:100%;
+	&:after {
+		display:none;
+	}
+	.home-tile {
+		@extend .span;
+		width:100%;
+		z-index:1;
+		&:nth-child(2) {
+			background: $grey;
+			.inner {
+				@extend .inverted-text;
+			}
+		}
+	}
+}
+
+@include respond-to(large) {
+	.home-chessboard {
+		.home-tile {
+			width:50%;
+			&:nth-child(2) {
+				background: none;
+			}
+		}
+		&:after {
+			content: "";
+			display:inline-block;
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 50%;
+			width: 50%;
+			height: 100%;
+			background: $grey;
+		}
+	}
+}
+
+.dark-grey-block {
+	background:$grey;
+}
+
 .inner {
 	&.image-only {
 		img { 
@@ -56,4 +104,9 @@
 			width:100%;
 		}
 	}
+	&.loop {
+		.product-container {
+			@extend .span4;
+		}
+	} 
 }

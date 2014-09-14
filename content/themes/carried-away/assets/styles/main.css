@@ -753,22 +753,27 @@ h4, h5, h6 {
   margin-bottom: 0;
 }
 
+/* line 59, ../../src/scss/_type.scss */
+.inverted-text, .home-chessboard .home-tile:nth-child(2) .inner {
+  color: #ffffff;
+}
+
 /* #Misc */
-/* line 60, ../../src/scss/_type.scss */
+/* line 64, ../../src/scss/_type.scss */
 a {
   text-decoration: underline;
 }
-/* line 62, ../../src/scss/_type.scss */
+/* line 66, ../../src/scss/_type.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 66, ../../src/scss/_type.scss */
+/* line 70, ../../src/scss/_type.scss */
 p {
   margin: 0;
 }
 
-/* line 69, ../../src/scss/_type.scss */
+/* line 73, ../../src/scss/_type.scss */
 ul {
   margin: 0;
   padding-left: 1.4em;
@@ -782,7 +787,7 @@ Contents
 */
 /* #Define grid */
 /* line 12, ../../src/scss/_grid.scss */
-.span1, .span2, .span3, .span4, .span5, .span6, .half-width, .span7, .span8, .span9, .span10, .span11, .span12, .full-width {
+.span1, .span2, .span3, .span4, .inner.loop .product-container, .span5, .span6, .half-width, .span7, .span8, .span9, .span10, .span11, .span12, .full-width {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -791,72 +796,80 @@ Contents
 }
 
 /* line 18, ../../src/scss/_grid.scss */
+.span, .home-chessboard .home-tile {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+}
+
+/* line 23, ../../src/scss/_grid.scss */
 .col:first-child {
   margin-left: 0;
 }
 
 @media (min-width: 50em) {
-  /* line 24, ../../src/scss/_grid.scss */
+  /* line 29, ../../src/scss/_grid.scss */
   .col {
     margin-left: 1%;
   }
 
-  /* line 27, ../../src/scss/_grid.scss */
+  /* line 32, ../../src/scss/_grid.scss */
   .span1 {
     width: 7.41667%;
   }
 
-  /* line 30, ../../src/scss/_grid.scss */
+  /* line 35, ../../src/scss/_grid.scss */
   .span2 {
     width: 15.83333%;
   }
 
-  /* line 33, ../../src/scss/_grid.scss */
+  /* line 38, ../../src/scss/_grid.scss */
   .span3 {
     width: 24.25%;
   }
 
-  /* line 36, ../../src/scss/_grid.scss */
-  .span4 {
+  /* line 41, ../../src/scss/_grid.scss */
+  .span4, .inner.loop .product-container {
     width: 32.66667%;
   }
 
-  /* line 39, ../../src/scss/_grid.scss */
+  /* line 44, ../../src/scss/_grid.scss */
   .span5 {
     width: 41.08333%;
   }
 
-  /* line 42, ../../src/scss/_grid.scss */
+  /* line 47, ../../src/scss/_grid.scss */
   .span6, .half-width {
     width: 49.5%;
   }
 
-  /* line 45, ../../src/scss/_grid.scss */
+  /* line 50, ../../src/scss/_grid.scss */
   .span7 {
     width: 57.91667%;
   }
 
-  /* line 48, ../../src/scss/_grid.scss */
+  /* line 53, ../../src/scss/_grid.scss */
   .span8 {
     width: 66.33333%;
   }
 
-  /* line 51, ../../src/scss/_grid.scss */
+  /* line 56, ../../src/scss/_grid.scss */
   .span9 {
     width: 74.75%;
   }
 
-  /* line 54, ../../src/scss/_grid.scss */
+  /* line 59, ../../src/scss/_grid.scss */
   .span10 {
     width: 83.16667%;
   }
 
-  /* line 57, ../../src/scss/_grid.scss */
+  /* line 62, ../../src/scss/_grid.scss */
   .span11 {
     width: 91.58333%;
   }
 
-  /* line 60, ../../src/scss/_grid.scss */
+  /* line 65, ../../src/scss/_grid.scss */
   .span12, .full-width {
     width: 100%;
     margin-left: 0;
@@ -870,10 +883,6 @@ Contents
 /* line 7, ../../src/scss/_custom.scss */
 #page #masthead {
   background: #ffffff;
-}
-/* line 10, ../../src/scss/_custom.scss */
-#page #content {
-  background: #222222;
 }
 /* line 13, ../../src/scss/_custom.scss */
 #page #colophon {
@@ -902,7 +911,56 @@ Contents
     display: block;
   }
 }
-/* line 53, ../../src/scss/_custom.scss */
+/* line 51, ../../src/scss/_custom.scss */
+.home-chessboard {
+  display: inline-block;
+  height: 100%;
+  float: left;
+  position: relative;
+  width: 100%;
+}
+/* line 57, ../../src/scss/_custom.scss */
+.home-chessboard:after {
+  display: none;
+}
+/* line 60, ../../src/scss/_custom.scss */
+.home-chessboard .home-tile {
+  width: 100%;
+  z-index: 1;
+}
+/* line 64, ../../src/scss/_custom.scss */
+.home-chessboard .home-tile:nth-child(2) {
+  background: #222222;
+}
+
+@media (min-width: 50em) {
+  /* line 75, ../../src/scss/_custom.scss */
+  .home-chessboard .home-tile {
+    width: 50%;
+  }
+  /* line 77, ../../src/scss/_custom.scss */
+  .home-chessboard .home-tile:nth-child(2) {
+    background: none;
+  }
+  /* line 81, ../../src/scss/_custom.scss */
+  .home-chessboard:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background: #222222;
+  }
+}
+/* line 95, ../../src/scss/_custom.scss */
+.dark-grey-block {
+  background: #222222;
+}
+
+/* line 101, ../../src/scss/_custom.scss */
 .inner.image-only img {
   height: auto;
   max-width: 100%;

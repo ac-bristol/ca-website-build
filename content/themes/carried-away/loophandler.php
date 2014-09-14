@@ -16,10 +16,12 @@ query_posts(array(
  
 // our loop
 if (have_posts()) {
-       while (have_posts()){
-       		the_post();
-            get_template_part( 'content', 'single' );
-       }
+       while (have_posts()){ 
+       		the_post(); ?>
+       		<div class="product-container">
+            <?php get_template_part( 'content', 'single' ); ?>
+            </div>
+       <?php }
 }
 wp_reset_query();
 ?>

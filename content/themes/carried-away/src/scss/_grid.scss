@@ -15,6 +15,11 @@ Contents
     width:100%;
 }
 
+.span {
+	@include box-sizing(border-box);
+    float:left;
+}
+
 .col:first-child {
 	margin-left:0;
 }
