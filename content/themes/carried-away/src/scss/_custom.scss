@@ -9,6 +9,10 @@
 	}
 	#content {
 		//background:$white;
+		.container {
+			padding-left:10%;
+			padding-right:10%;
+		}
 	}
 	#colophon {
 		background:blue;
@@ -70,6 +74,52 @@
 	}
 }
 
+.no-margin {
+	padding:0 !important
+}
+
+.dark-grey-block {
+	background:$grey;
+}
+
+.inner {
+	&.image-only {
+		img { 
+			height:auto;
+			max-width:100%;
+			width:100%;
+		}
+	}
+	&.loop {
+		.product-container {
+			@extend .span4;
+			height:auto;
+			min-height:260px;
+			.product {
+				padding:20px;
+				.product-image {
+					padding: 10px;
+					img {
+						height:auto;
+						max-width:100%;
+						width:100%;
+					}
+				}
+				.product-info {
+					padding: 10px;
+					p {
+						@extend .small-paragraph;
+					}
+					a {
+						text-decoration:none;
+					}
+				}
+			}
+			
+		}
+	} 
+}
+
 @include respond-to(large) {
 	.home-chessboard {
 		.home-tile {
@@ -90,23 +140,4 @@
 			background: $grey;
 		}
 	}
-}
-
-.dark-grey-block {
-	background:$grey;
-}
-
-.inner {
-	&.image-only {
-		img { 
-			height:auto;
-			max-width:100%;
-			width:100%;
-		}
-	}
-	&.loop {
-		.product-container {
-			@extend .span4;
-		}
-	} 
 }

@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-<div class="container clearfix">
+<div class="container clearfix no-margin">
 
 	<div class="full-width">
 		<div class="inner image-only">
@@ -22,7 +22,7 @@ get_header(); ?>
 	
 </div>
 
-<div class="container clearfix home-chessboard">
+<div class="container clearfix home-chessboard no-margin">
 
 	<div class="home-tile">
 		<div class="inner image-only">

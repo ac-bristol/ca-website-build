@@ -19,7 +19,7 @@ if (have_posts()) {
        while (have_posts()){ 
        		the_post(); ?>
        		<div class="product-container">
-            <?php get_template_part( 'content', 'single' ); ?>
+            <?php get_template_part( 'content', 'product' ); ?>
             </div>
        <?php }
 }

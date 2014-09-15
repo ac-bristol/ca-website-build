@@ -737,43 +737,53 @@ h2 {
 
 /* line 44, ../../src/scss/_type.scss */
 h3 {
+  font-size: 1.2em;
   line-height: 1em;
   margin: 0 0 0.4em 0;
 }
-
 /* line 48, ../../src/scss/_type.scss */
+h3.small-header {
+  font-size: 1em;
+}
+
+/* line 52, ../../src/scss/_type.scss */
 h4, h5, h6 {
   line-height: 1em;
   margin: 0 0 0.2em 0;
 }
 
 /* #Custom */
-/* line 55, ../../src/scss/_type.scss */
+/* line 59, ../../src/scss/_type.scss */
 #masthead h1, h2 {
   margin-bottom: 0;
 }
 
-/* line 59, ../../src/scss/_type.scss */
+/* line 63, ../../src/scss/_type.scss */
 .inverted-text, .home-chessboard .home-tile:nth-child(2) .inner {
   color: #ffffff;
 }
 
+/* line 67, ../../src/scss/_type.scss */
+.small-paragraph, .inner.loop .product-container .product .product-info p {
+  font-size: 0.8em;
+}
+
 /* #Misc */
-/* line 64, ../../src/scss/_type.scss */
+/* line 72, ../../src/scss/_type.scss */
 a {
   text-decoration: underline;
 }
-/* line 66, ../../src/scss/_type.scss */
+/* line 74, ../../src/scss/_type.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 70, ../../src/scss/_type.scss */
+/* line 78, ../../src/scss/_type.scss */
 p {
   margin: 0;
 }
 
-/* line 73, ../../src/scss/_type.scss */
+/* line 81, ../../src/scss/_type.scss */
 ul {
   margin: 0;
   padding-left: 1.4em;
@@ -884,34 +894,39 @@ Contents
 #page #masthead {
   background: #ffffff;
 }
-/* line 13, ../../src/scss/_custom.scss */
+/* line 12, ../../src/scss/_custom.scss */
+#page #content .container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+/* line 17, ../../src/scss/_custom.scss */
 #page #colophon {
   background: blue;
 }
 
-/* line 20, ../../src/scss/_custom.scss */
+/* line 24, ../../src/scss/_custom.scss */
 .menu-toggle,
 .main-navigation.toggled .nav-menu {
   display: block;
 }
 
-/* line 25, ../../src/scss/_custom.scss */
+/* line 29, ../../src/scss/_custom.scss */
 .main-navigation ul {
   display: none;
 }
 
 @media (min-width: 46.8em) {
-  /* line 30, ../../src/scss/_custom.scss */
+  /* line 34, ../../src/scss/_custom.scss */
   .menu-toggle {
     display: none;
   }
 
-  /* line 33, ../../src/scss/_custom.scss */
+  /* line 37, ../../src/scss/_custom.scss */
   .main-navigation ul {
     display: block;
   }
 }
-/* line 51, ../../src/scss/_custom.scss */
+/* line 55, ../../src/scss/_custom.scss */
 .home-chessboard {
   display: inline-block;
   height: 100%;
@@ -919,30 +934,74 @@ Contents
   position: relative;
   width: 100%;
 }
-/* line 57, ../../src/scss/_custom.scss */
+/* line 61, ../../src/scss/_custom.scss */
 .home-chessboard:after {
   display: none;
 }
-/* line 60, ../../src/scss/_custom.scss */
+/* line 64, ../../src/scss/_custom.scss */
 .home-chessboard .home-tile {
   width: 100%;
   z-index: 1;
 }
-/* line 64, ../../src/scss/_custom.scss */
+/* line 68, ../../src/scss/_custom.scss */
 .home-chessboard .home-tile:nth-child(2) {
   background: #222222;
 }
 
+/* line 77, ../../src/scss/_custom.scss */
+.no-margin {
+  padding: 0 !important;
+}
+
+/* line 81, ../../src/scss/_custom.scss */
+.dark-grey-block {
+  background: #222222;
+}
+
+/* line 87, ../../src/scss/_custom.scss */
+.inner.image-only img {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+/* line 94, ../../src/scss/_custom.scss */
+.inner.loop .product-container {
+  height: auto;
+  min-height: 260px;
+}
+/* line 98, ../../src/scss/_custom.scss */
+.inner.loop .product-container .product {
+  padding: 20px;
+}
+/* line 100, ../../src/scss/_custom.scss */
+.inner.loop .product-container .product .product-image {
+  padding: 10px;
+}
+/* line 102, ../../src/scss/_custom.scss */
+.inner.loop .product-container .product .product-image img {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+/* line 108, ../../src/scss/_custom.scss */
+.inner.loop .product-container .product .product-info {
+  padding: 10px;
+}
+/* line 113, ../../src/scss/_custom.scss */
+.inner.loop .product-container .product .product-info a {
+  text-decoration: none;
+}
+
 @media (min-width: 50em) {
-  /* line 75, ../../src/scss/_custom.scss */
+  /* line 125, ../../src/scss/_custom.scss */
   .home-chessboard .home-tile {
     width: 50%;
   }
-  /* line 77, ../../src/scss/_custom.scss */
+  /* line 127, ../../src/scss/_custom.scss */
   .home-chessboard .home-tile:nth-child(2) {
     background: none;
   }
-  /* line 81, ../../src/scss/_custom.scss */
+  /* line 131, ../../src/scss/_custom.scss */
   .home-chessboard:after {
     content: "";
     display: inline-block;
@@ -954,17 +1013,6 @@ Contents
     height: 100%;
     background: #222222;
   }
-}
-/* line 95, ../../src/scss/_custom.scss */
-.dark-grey-block {
-  background: #222222;
-}
-
-/* line 101, ../../src/scss/_custom.scss */
-.inner.image-only img {
-  height: auto;
-  max-width: 100%;
-  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
